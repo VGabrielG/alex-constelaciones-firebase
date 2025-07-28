@@ -1,0 +1,88 @@
+/*
+ * Clave para mantener el fondo de partículas y la superposición.
+ * Es casi idéntico al :host de tu página principal.
+*/
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* El componente es un "fantasma" por defecto */
+}
+
+/*
+ * Contenedor principal que SÍ se puede tocar y hacer scroll.
+ * Reactivamos los eventos y permitimos el desplazamiento vertical.
+*/
+.products-container {
+  width: 100%;
+  height: 100%;
+  padding: 100px 40px 40px 40px; /* Más padding arriba para no chocar con el header */
+  color: white;
+  overflow-y: auto; /* ¡MUY IMPORTANTE! Permite hacer scroll */
+  pointer-events: auto; /* Reactiva el mouse para esta área */
+  text-align: center;
+}
+
+/* Estilos para los textos, manteniendo la coherencia */
+.products-container h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+}
+
+.products-container .intro-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+/* Grid para organizar las tarjetas de servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 2rem auto; /* Centra el grid y añade un poco de margen superior */
+  text-align: left; /* Alinea el texto de cada servicio a la izquierda */
+}
+
+/* Estilo de cada tarjeta de servicio */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor para las imágenes/videos de placeholder */
+.media-placeholder img {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #333;
+  aspect-ratio: 16 / 9; /* Mantiene la proporción de video */
+  object-fit: cover;
+}
+
+.media-placeholder{
+    margin-top: auto;
+}

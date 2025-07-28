@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { MiMusica } from './mi-musica/mi-musica';
+import { ProductosAudiovisuales } from './productos-audiovisuales/productos-audiovisuales';
 
 export const routes: Routes = [
 
@@ -16,6 +17,11 @@ export const routes: Routes = [
     {
         path: 'mi-musica',
         component: MiMusica
+    },
+        {
+        path: 'Productos-Audiovisuales',
+        component: ProductosAudiovisuales
     }
+
 
 ];

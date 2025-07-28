@@ -1,14 +1,9 @@
-<ng-particles 
-  [id]="id" 
-  [options]="particlesOptions" 
-  [particlesInit]="particlesInit"
-></ng-particles>
 <div class="home-content">
   <h1>Alexandros Tefarikis</h1>
   <p>Transforming ideas into reality. Explore my services and how we can collaborate on your next project.</p>
   <div class="buttons-container">
     @for (button of navigationButtons; track button.id) {
-      <a [href]="button.href" class="button">{{ button.text }}</a>
+      <a [routerLink]="button.href" class="button">{{ button.text }}</a>
     }
   </div>
 </div>
