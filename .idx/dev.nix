@@ -1,7 +1,7 @@
 {pkgs}: {
   channel = "stable-24.05";
   packages = [
-    pkgs.nodejs_22
+    pkgs.nodejs_22_x
   ];
   idx.extensions = [
     "angular.ng-template"
