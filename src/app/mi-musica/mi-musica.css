@@ -1,0 +1,52 @@
+/* --- Contenedor Principal de Mi Música --- */
+.music-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 40px 40px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Título Principal "Mi Música" */
+.music-container h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Mensaje "Próximamente" */
+.music-message {
+  font-family: serif;
+  font-style: italic;
+  font-size: 2.3rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 750px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* --- DEFINICIÓN DE LAS ANIMACIONES --- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -18,7 +18,7 @@ export class Home {
 
   readonly navigationButtons = [
     { id: 1, text: 'Servicios Audiovisuales', href: '/Productos-Audiovisuales' },
-    { id: 2, text: 'Mi Historia', href: '/mi-historia' },
+    { id: 2, text: 'Mi Historia', href: '/Mi-Historia' },
     { id: 3, text: 'Mi música', href: '/mi-musica' },
     { id: 4, text: 'Contacto', href: '/contacto' }
   ];

@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { MiMusica } from './mi-musica/mi-musica';
 import { ProductosAudiovisuales } from './productos-audiovisuales/productos-audiovisuales';
+import { MiHistoria } from './mi-historia/mi-historia';
+import { Contacto } from './contacto/contacto';
 
 export const routes: Routes = [
 
@@ -15,12 +17,20 @@ export const routes: Routes = [
         pathMatch:'full'
     },
     {
-        path: 'mi-musica',
+        path: 'Mi-Musica',
         component: MiMusica
     },
-        {
+    {
         path: 'Productos-Audiovisuales',
         component: ProductosAudiovisuales
+    },
+    {
+        path:'Mi-Historia',
+        component: MiHistoria
+    },
+    {
+        path: 'Contacto',
+        component: Contacto
     }
 
 

@@ -1,0 +1,105 @@
+/* --- Contenedor Principal --- */
+.historia-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 40px 40px 40px;
+  color: white;
+}
+
+/* --- Títulos y Textos Generales --- */
+.historia-container h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  /* ANIMACIÓN AÑADIDA */
+  animation: fadeInDown 1s ease-out;
+}
+
+.historia-container blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  /* ANIMACIÓN AÑADIDA CON RETRASO */
+  animation: fadeInDown 1s ease-out 0.3s both;
+}
+
+/* --- Tarjetas de Eventos de la Historia --- */
+.timeline-event {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+  margin-bottom: 2rem;
+  text-align: left;
+  /* ANIMACIÓN AÑADIDA CON RETRASO */
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.timeline-event h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.timeline-event p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* --- Lista de Hitos Destacados --- */
+.highlight-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.highlight-list li {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.highlight-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- DEFINICIÓN DE LAS ANIMACIONES --- */
+/* (Asegúrate de que este bloque esté al final de tu CSS) */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
