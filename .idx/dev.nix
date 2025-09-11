@@ -1,7 +1,7 @@
 {pkgs}: {
-  channel = "stable-24.05";
+  channel = "unstable";
   packages = [
-    pkgs.nodejs_22_x
+    pkgs.nodejs_22
   ];
   idx.extensions = [
     "angular.ng-template"
@@ -18,7 +18,6 @@
          "$PORT"
          "--host"
          "0.0.0.0"
-         "--disable-host-check"
        ];
        manager = "web";
      };

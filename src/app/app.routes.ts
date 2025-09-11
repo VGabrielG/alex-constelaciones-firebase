@@ -4,6 +4,7 @@ import { MiMusica } from './mi-musica/mi-musica';
 import { ProductosAudiovisuales } from './productos-audiovisuales/productos-audiovisuales';
 import { MiHistoria } from './mi-historia/mi-historia';
 import { Contacto } from './contacto/contacto';
+import { Clases } from './clases/clases';
 
 export const routes: Routes = [
 
@@ -31,6 +32,10 @@ export const routes: Routes = [
     {
         path: 'Contacto',
         component: Contacto
+    },
+    {
+        path: 'Clases',
+        component: Clases
     }
 
 

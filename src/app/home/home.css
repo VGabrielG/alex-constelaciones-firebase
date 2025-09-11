@@ -1,13 +1,11 @@
 :host {
-  display: block;
+  display: flex; /* Usamos Flexbox para el contenedor principal */
+  flex-direction: column; /* Organiza los elementos en columna */
   width: 100%;
-  height: 100vh;
-  position: relative; /* ¡Cuidado! Cámbialo a 'absolute' */
-  position: absolute; /* Para que se superponga correctamente sobre el fondo */
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  pointer-events: none; /* <-- MUEVE LA REGLA AQUÍ */
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; /* Evita el scroll horizontal */
+  /* Elimina 'pointer-events: none;' si necesitas interactuar con los elementos */
 }
 
 .home-content {
@@ -15,60 +13,117 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100%;
+  flex-grow: 1; /* Permite que este contenedor crezca y ocupe el espacio vertical */
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  margin-top: 40px;
 }
 
 .home-content h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+  margin-top: 7rem;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
   animation: fadeInDown 1s ease-out;
+  padding: 1rem;
+}
+.upcoming-events-p-container{
+  width: 23%;
+  height: 3rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 80px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center; /* This is the key property for vertical centering */
+  justify-content: center; /* Optional: This will also center it horizontally */
 }
 
-.home-content p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  max-width: 800px;
-  margin-bottom: 3rem;
-  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-  animation: fadeInUp 1s ease-out 0.3s both;
+
+.upcoming-events-title {
+  color: #ecf0f1;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 10px;
   font-style: italic;
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #ecf0f1;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+.events-row{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+
+}
+
+.upcoming-events-image-container {
+  background-color:rgba(255,255,255,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  max-width: 350px; /* Reducido de 500px a 350px */
+  width: 100%;
+  margin-right: 40px;
+  margin-left: 40px;
+
+  flex-grow: 0; /* Desactiva el crecimiento si no lo necesitas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.upcoming-events-image-container img {
+  width: 100%;
+  height: auto; /* Cambiamos a 'auto' para que la imagen se adapte sin necesidad de rellenar el espacio */
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
 /* Contenedor de los botones de la página de inicio */
-.buttons-container {
+/* .buttons-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   animation: fadeIn 1s ease-out 0.6s both;
   pointer-events: auto;
-  /* Nota: Se eliminó el font-size: 30px para que el tamaño del texto lo controle el botón */
-}
+  
+} */
 
 /* Estilo unificado para los botones */
+/* 
 .button {
-  display: inline-block; /* Asegura un comportamiento de bloque */
-  padding: 0.8rem 1.5rem; /* Se mantiene un padding generoso */
+  display: inline-block; 
+  padding: 0.8rem 1.5rem; 
   color: #f0f0f0;
   text-decoration: none;
-  font-size: 1.8rem; /* Un tamaño de fuente legible y prominente */
+  font-size: 1.8rem; 
   font-weight: 500;
   
-  /* Estilo de vidrio esmerilado, igual a la nueva nav */
+  
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   backdrop-filter: blur(5px);
   
-  transition: all 0.3s ease;
-}
+  
+} transition: all 0.3s ease;
+*/
 
 /* Efecto al pasar el mouse, igual a la nueva nav */
 .button:hover {

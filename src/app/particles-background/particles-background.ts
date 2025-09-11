@@ -2,11 +2,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgParticlesModule } from 'ng-particles';
 import { Engine, ISourceOptions } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
-import { RouterModule} from '@angular/router';
+import { RouterLink, RouterModule} from '@angular/router';
+
 
 @Component({
   selector: 'app-particles-background',
-  imports: [NgParticlesModule],
+  standalone:true,
+  imports: [NgParticlesModule, RouterLink],
   templateUrl: './particles-background.html',
   styleUrl: './particles-background.css'
 })

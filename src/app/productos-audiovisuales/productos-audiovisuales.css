@@ -32,6 +32,14 @@
   text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
   animation: fadeInDown 1s ease-out;
 }
+.intro-text {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 800px;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+  font-style: italic;
+}
 
 .products-container .intro-text {
   font-size: clamp(1rem, 2vw, 1.25rem);
