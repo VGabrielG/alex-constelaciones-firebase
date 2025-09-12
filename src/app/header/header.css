@@ -1,0 +1,74 @@
+/* Estilos para el encabezado principal (Revertido a Blanco) */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #040926; /* Fondo blanco sólido */
+  padding: 1.5rem 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+  transition: background-color 0.3s ease;
+  z-index: 10000;
+}
+
+.main-nav {
+  position: static;
+  top: auto;
+  right: auto;
+  padding: 0;
+  margin-right: 3rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3.0rem; /* Aumentamos el espacio entre botones */
+}
+
+.main-nav a {
+  display: inline-block; /* Aseguramos que transform se aplique correctamente */
+  text-decoration: none;
+  color: #FFA500; /* Color de texto naranja */
+  font-weight: 500;
+  padding: 10px 5px; /* Hacemos los botones más grandes */
+  border-bottom: 2px solid #FFA500; /* Borde naranja */
+  transition: color 0.3s, border-bottom-color 0.3s, transform 0.3s ease; /* Transición suave */
+}
+
+.main-nav a:hover, .main-nav a.active {
+  color: #E59400; /* Naranja más oscuro en hover */
+  border-bottom-color: #E59400;
+  transform: translateY(-3px); /* Animación de movimiento hacia arriba */
+}
+
+/* Language Selector Styles */
+.language-selector {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-selector button {
+  background-color: transparent;
+  border: 1px solid #FFA500;
+  color: #FFA500;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.language-selector button:hover {
+  background-color: #FFA500;
+  color: #040926;
+}

@@ -5,6 +5,7 @@ import { ProductosAudiovisuales } from './productos-audiovisuales/productos-audi
 import { MiHistoria } from './mi-historia/mi-historia';
 import { Contacto } from './contacto/contacto';
 import { Clases } from './clases/clases';
+import { ProximosEventos } from './proximos-eventos/proximos-eventos';
 
 export const routes: Routes = [
 
@@ -36,6 +37,10 @@ export const routes: Routes = [
     {
         path: 'Clases',
         component: Clases
+    },
+    {
+        path: 'Proximos-Eventos',
+        component: ProximosEventos
     }
 
 

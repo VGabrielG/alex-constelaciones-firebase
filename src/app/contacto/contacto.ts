@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { ParticlesBackground } from '../particles-background/particles-background';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contacto',
-  // 'imports' es para componentes standalone. Si no usas esa arquitectura, puedes eliminar esa línea.
-  // imports: [], 
+  standalone: true,
+  imports: [ParticlesBackground, CommonModule],
   templateUrl: './contacto.html',
   styleUrl: './contacto.css'
 })
@@ -33,4 +35,3 @@ export class Contacto {
     return `https://wa.me/${this.numeroParaWhatsApp}?text=${encodeURIComponent(this.mensajeWhatsApp)}`;
   }
 }
-

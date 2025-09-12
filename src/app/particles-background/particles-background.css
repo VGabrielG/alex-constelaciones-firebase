@@ -1,64 +1,8 @@
-
-.main-header {
-  position: fixed;
+:host {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #040926;
-  padding: 1.5rem 2rem;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-nav {
-  position: static;
-  top: auto;
-  right: auto;
-  padding: 0;
-  margin-right: 3rem;
-}
-
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2.0rem;
-}
-
-/* Estilo de los botones (como un input) */
-.main-nav a {
-  display: inline-block; 
-  padding: 0.7rem 1.35rem; /* Adjusted from 0.8rem 1.5rem */
-  color: #f0f0f0;
-  text-decoration: none;
-  font-size: 1.6rem; /* Adjusted from 1.8rem */
-  font-weight: 500;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  backdrop-filter: blur(5px);
-}
-
-.main-nav a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-/* --- Media Query para pantallas pequeñas (móvil) --- */
-@media (max-width: 768px) {
-
-  .main-nav ul {
-    flex-wrap: wrap; /* Esto hace que los botones se envuelvan */
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .main-nav a {
-    font-size: 0.55rem; /* Adjusted from 0.6rem */
-    padding: 0.45rem 0.9rem; /* Adjusted from 0.5rem 1rem */
-  }
+  height: 100%;
+  z-index: -1;
 }

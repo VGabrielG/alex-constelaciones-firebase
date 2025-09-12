@@ -1,0 +1,87 @@
+/* Estilos para "Próximos Eventos" con tarjeta blanca sobre fondo azul */
+
+/* Título y flecha deben ser claros para leerse sobre el fondo azul */
+.upcoming-events-title {
+  color: #ecf0f1;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-style: italic;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #FFA500; /* Flecha naranja */
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.events-section {
+  /* AJUSTE: Reducimos el padding para que el título suba */
+  padding-top: 8rem; 
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.events-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 0rem;
+}
+
+/* Esta es la tarjeta que contendrá la imagen */
+.upcoming-events-image-container {
+  background-color: white; /* ¡Fondo blanco! */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  border-radius: 8px; /* Bordes suaves */
+  padding: 0; /* Espacio interior para que la imagen respire */
+  max-width: 320px; 
+  width: 100%;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #FFA500; /* Borde naranja */
+}
+
+.upcoming-events-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.events-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

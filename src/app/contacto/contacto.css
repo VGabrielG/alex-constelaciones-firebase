@@ -1,70 +1,62 @@
-/* --- Contenedor Principal de Contacto --- */
+/* Estilos para la página de contacto con tarjeta blanca sobre fondo azul (REFORZADO) */
 .contact-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 120px 40px 40px 40px;
-  color: white;
+  padding: 8rem 2rem 2rem 2rem;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
-/* Título Principal "Contacto" */
-.contact-container h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
+.header-container {
   margin-bottom: 2rem;
-  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-  animation: fadeInDown 1s ease-out;
 }
 
-/* Frase de introducción con estilo itálico */
-.contact-intro {
-  font-family: serif;
-  font-style: italic;
-  font-size: 1.2rem;
+/* Título y texto de introducción deben ser claros para leerse sobre el azul */
+.main-title {
+  font-size: 2.5rem;
+  color: #E0E0E0 !important; /* REFUERZO: Color claro */
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  color: #BDBDBD !important; /* REFUERZO: Color claro */
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 750px;
-  margin: 0 auto 3rem auto;
-  animation: fadeInDown 1s ease-out 0.3s both;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  border-left: 4px solid #FFA500;
+  text-align: left;
+  font-style: italic;
 }
 
-/* --- Caja Principal de Contacto --- */
 .contact-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 2.5rem 3rem;
-  backdrop-filter: blur(5px);
+  background-color: white; /* La caja de contacto es blanca */
+  color: #333; /* Texto interior oscuro */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  padding: 25px 35px;
   display: inline-block;
   text-align: left;
-  animation: fadeInUp 1s ease-out 0.6s both;
+  border: none;
 }
 
-.contact-box p {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-/* Estilos de los datos dentro de la caja */
-.contact-box strong {
-  font-weight: 600;
-  margin-right: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
+/* Nos aseguramos que el texto dentro de la caja sea oscuro */
+.contact-box p, .contact-box strong {
+  color: #333;
 }
 
 .contact-box a {
-  color: #f0f0f0;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: #FFA500;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-box a:hover {
-  color: white;
-  text-decoration: underline;
+    color: #E59400;
+    text-decoration: underline;
 }
 
-
-/* --- Contenedor y Botón de WhatsApp --- */
+/* El resto de los estilos (botón de WhatsApp) ya funcionan bien */
 .buttons-container {
   display: flex;
   justify-content: center;
@@ -74,48 +66,28 @@
 .button {
   display: inline-flex;
   align-items: center;
-  padding: 1rem 2.5rem;
+  padding: 10px 15px;
   color: #fff;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1rem; 
   font-weight: 600;
-  background-color: #25d366;
+  background-color: #FFA500;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: #128c7e;
+  background-color: #E59400;
   transform: translateY(-2px);
 }
 
 .button .fa-whatsapp {
   margin-right: 12px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-
-/* --- DEFINICIÓN DE LAS ANIMACIONES --- */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.button span {
+  color: white !important;
 }

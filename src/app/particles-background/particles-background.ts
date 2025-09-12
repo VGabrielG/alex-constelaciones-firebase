@@ -24,7 +24,7 @@ export class ParticlesBackground {
   particlesOptions: ISourceOptions = {
     fullScreen: {
       enable: true,
-      zIndex: -9999
+      zIndex: 0
     },
     particles: {
       number: {
@@ -83,11 +83,11 @@ export class ParticlesBackground {
 
     // --- INTERACTIVITY SECTION ---
     interactivity: {
-      detectsOn: "canvas", // Where to detect mouse events: "canvas", "window", or "parent"
+      detectsOn: "window", // Where to detect mouse events: "canvas", "window", or "parent"
       events: {
         onClick: {
           enable: true, // Enable click interaction
-          mode: "push" // Mode when clicking: "push", "remove", "bubble", "repulse", "grab"
+          mode: "grab" // Mode when clicking: "push", "remove", "bubble", "repulse", "grab"
         },
         onHover: {
           enable: true, // Enable hover interaction
