@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.noticias-container {
+  padding: 8rem 2rem 2rem 2rem;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.noticia-card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid orange;
+}
+
+.noticia-imagen {
+  width: 100%;
+  height: auto;
+}
+
+.noticia-descripcion {
+  padding: 1rem;
+  color: #ccc;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+  .noticias-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .noticias-container {
+    padding: 6rem 1rem 1rem 1rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+}

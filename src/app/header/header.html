@@ -1,12 +1,18 @@
 <header class="main-header">
-  <nav class="main-nav">
+  <button class="hamburger" (click)="toggleMenu()" [class.is-active]="isMenuOpen">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </button>
+  <nav class="main-nav" [class.is-open]="isMenuOpen">
     <ul>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/Productos-Audiovisuales">Productos Audiovisuales</a></li>
-      <li><a routerLink="/Mi-Historia">Mi Historia</a></li>
-      <li><a routerLink="/Clases">Clases</a></li>
-      <li><a routerLink="/Proximos-Eventos">Próximos Eventos</a></li>
-      <li><a routerLink="/Contacto">Contacto</a></li>
+      <li><a routerLink="/home" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/Productos-Audiovisuales" (click)="closeMenu()">Productos Audiovisuales</a></li>
+      <li><a routerLink="/Mi-Historia" (click)="closeMenu()">Mi Historia</a></li>
+      <li><a routerLink="/Clases" (click)="closeMenu()">Clases</a></li>
+      <li><a routerLink="/Proximos-Eventos" (click)="closeMenu()">Próximos Eventos</a></li>
+      <li><a routerLink="/Noticias" (click)="closeMenu()">Noticias</a></li>
+      <li><a routerLink="/Contacto" (click)="closeMenu()">Contacto</a></li>
     </ul>
   </nav>
 </header>

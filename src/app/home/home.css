@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .home-container {
   position: relative;
   height: 85vh;
@@ -12,39 +15,89 @@
   overflow: hidden; /* Evita el scroll */
 }
 
+.images-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
 .profile-image {
   width: 300px; /* Ancho deseado */
   height: 300px; /* Alto deseado */
   border-radius: 20px; /* Bordes redondeados */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   object-fit: cover;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  opacity: 0.8; /* Transparencia de la imagen */
-  border: 1px solid #FFA500; /* Borde naranja */
-  margin-left: 5px;
-  margin-right: 5 px;
+  border: 3px solid #FFA500; /* Borde naranja */
+  opacity: 0; /* Inicialmente invisible para la animación */
+  animation: fallIn 1s ease-in-out forwards;
+  transition: all 0.3s ease-in-out;
 }
 
+.image-wrapper:hover .profile-image {
+  filter: brightness(50%);
+}
+
+.image-wrapper::before {
+  content: '\f04b'; /* Font Awesome play icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Make sure the icon doesn't block clicks */
+  z-index: 1;
+}
+
+.image-wrapper:hover::before {
+  opacity: 1;
+}
+
+/* Retraso en la animación para cada imagen */
+.image-wrapper:nth-child(1) .profile-image {
+  animation-delay: 1s;
+}
+.image-wrapper:nth-child(2) .profile-image {
+  animation-delay: 1.2s;
+}
+.image-wrapper:nth-child(3) .profile-image {
+  animation-delay: 1.4s;
+}
+
+
 .main-title {
+  font-family: 'Dancing Script', cursive;
   font-size: 4rem; /* Tamaño mantenido */
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
   animation: fadeInDown 1s ease-in-out;
+  
 }
 
 .subtitle {
-  font-size: 1rem; /* Tamaño mantenido */
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem; /* Tamaño mantenido */
   font-weight: 300;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   margin-bottom: 2.5rem;
   animation: fadeInUp 1s ease-in-out 0.5s;
   animation-fill-mode: both;
-  font-style: italic;
 }
 
-/* Animaciones para el texto */
+/* Animaciones */
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -53,4 +106,40 @@
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fallIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 0.8; transform: translateY(0); }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 10vh;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 2rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .images-container {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    margin: 0 0 1rem 0;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
 }

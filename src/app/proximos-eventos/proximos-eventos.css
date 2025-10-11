@@ -1,4 +1,4 @@
-/* Estilos para "Próximos Eventos" con tarjeta blanca sobre fondo azul */
+/* Estilos para \"Próximos Eventos\" con tarjeta blanca sobre fondo azul */
 
 /* Título y flecha deben ser claros para leerse sobre el fondo azul */
 .upcoming-events-title {
@@ -25,6 +25,7 @@
 .events-section {
   /* AJUSTE: Reducimos el padding para que el título suba */
   padding-top: 8rem; 
+  padding-bottom: 2rem;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -83,5 +84,27 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .events-section {
+    padding-top: 6rem;
+  }
+
+  .upcoming-events-title {
+    font-size: 1.8rem;
+  }
+
+  .events-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .upcoming-events-image-container {
+    margin: 0 1rem;
+    max-width: 90%;
   }
 }

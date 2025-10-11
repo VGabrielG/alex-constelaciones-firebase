@@ -3,8 +3,11 @@
   <h1 class="main-title">Alexandros Tefarikis</h1>
   <p class="subtitle">Músico, Compositor y Productor de Eventos</p>
   <div class="images-container">
-    <img src="/imagenes/alex-estrellas.png" alt="Alexandros Tefarikis con guitarra de estrellas" class="profile-image">
-    <img src="/imagenes/alex-electrica.png" alt="Alexandros Tefarikis con guitarra eléctrica" class="profile-image">
-    <img src="/imagenes/alex-clasica.png" alt="Alexandros Tefarikis con guitarra clásica" class="profile-image">
+    <div *ngFor="let video of videos" class="image-wrapper">
+      <img [src]="video.thumb" [alt]="video.alt" class="profile-image" [class.clickable]="video.url" (click)="video.url && openVideoModal(video.url)">
+      <p class="image-description">{{ video.description }}</p>
+    </div>
   </div>
 </div>
+
+<app-video-modal *ngIf="selectedVideoUrl" [videoUrl]="selectedVideoUrl!" (closeModal)="closeVideoModal()"></app-video-modal>

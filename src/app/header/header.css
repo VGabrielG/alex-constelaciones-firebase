@@ -1,26 +1,33 @@
-/* Estilos para el encabezado principal (Revertido a Blanco) */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .main-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #040926; /* Fondo blanco sólido */
-  padding: 1.5rem 2rem;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
-  transition: background-color 0.3s ease;
+  background-color: #040926;
+  padding: 1rem 2rem;
   z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Dancing Script', cursive;
 }
 
 .main-nav {
-  position: static;
-  top: auto;
-  right: auto;
-  padding: 0;
-  margin-right: 3rem;
+  display: none;
+}
+
+.main-nav.is-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #040926;
+  padding: 1rem 0;
 }
 
 .main-nav ul {
@@ -28,47 +35,90 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 3.0rem; /* Aumentamos el espacio entre botones */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.main-nav a {
-  display: inline-block; /* Aseguramos que transform se aplique correctamente */
+.main-nav ul li a {
+  display: block;
   text-decoration: none;
-  color: #FFA500; /* Color de texto naranja */
+  color: #FFA500;
   font-weight: 500;
-  padding: 10px 5px; /* Hacemos los botones más grandes */
-  border-bottom: 2px solid #FFA500; /* Borde naranja */
-  transition: color 0.3s, border-bottom-color 0.3s, transform 0.3s ease; /* Transición suave */
+  padding: 1rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .main-nav a:hover, .main-nav a.active {
-  color: #E59400; /* Naranja más oscuro en hover */
+  color: #E59400;
   border-bottom-color: #E59400;
-  transform: translateY(-3px); /* Animación de movimiento hacia arriba */
 }
 
-/* Language Selector Styles */
-.language-selector {
-  position: absolute;
-  top: 50%;
-  right: 2rem;
-  transform: translateY(-50%);
+.hamburger {
   display: flex;
-  gap: 0.5rem;
-}
-
-.language-selector button {
-  background-color: transparent;
-  border: 1px solid #FFA500;
-  color: #FFA500;
-  padding: 5px 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  font-weight: 500;
-  border-radius: 4px;
+  padding: 0;
+  z-index: 10;
 }
 
-.language-selector button:hover {
+.hamburger .line {
+  width: 2rem;
+  height: 0.25rem;
   background-color: #FFA500;
-  color: #040926;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.is-active .line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active .line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburger.is-active .line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+  .main-header {
+    justify-content: center;
+  }
+
+  .main-nav {
+    display: flex;
+    position: static;
+    width: auto;
+    background: none;
+    padding: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .main-nav ul li a {
+    font-size: 2rem !important;
+    padding: 10px 5px;
+    border-bottom: 2px solid #FFA500;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-/* Estilos para "Mi Historia" con tarjetas blancas sobre fondo azul */
+/* Estilos para \"Mi Historia\" con tarjetas blancas sobre fondo azul */
 .historia-container {
   padding: 8rem 2rem 2rem 2rem;
   font-family: 'Roboto', sans-serif;
@@ -12,6 +12,7 @@ h1 {
   text-align: center;
   color: #E0E0E0;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 blockquote {
@@ -76,4 +77,24 @@ p {
   left: 0;
   top: 0;
   color: #3498db;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .historia-container {
+    padding: 6rem 1rem 1rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  blockquote {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .clase-card {
+    padding: 20px;
+  }
 }

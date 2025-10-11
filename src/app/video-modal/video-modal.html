@@ -1,0 +1,6 @@
+<div class="modal-overlay" (click)="onClose()">
+  <div class="modal-content">
+    <iframe [src]="getSafeVideoUrl()" frameborder="0" allowfullscreen></iframe>
+    <button class="close-button" (click)="onClose()">X</button>
+  </div>
+</div>

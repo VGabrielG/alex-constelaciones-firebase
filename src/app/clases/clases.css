@@ -10,6 +10,7 @@ h1 {
   text-align: center;
   color: #E0E0E0;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 .clase-card {
@@ -23,6 +24,10 @@ h1 {
   justify-content: space-between;
   align-items: center;
   border: none; /* Quitamos el borde que pusimos para el tema oscuro */
+}
+
+.clase-info {
+  flex-grow: 1;
 }
 
 /* Título dentro de la tarjeta, debe ser oscuro */
@@ -47,6 +52,7 @@ p {
     border: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     transition: all 0.3s ease-in-out;
+    margin-left: 1rem;
 }
 
 .btn-reservar:hover {
@@ -54,4 +60,29 @@ p {
     color: #000;
     transform: translateY(-2px); /* Efecto de elevación */
     box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .clases-container {
+    padding: 6rem 1rem 1rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .clase-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .clase-info {
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-reservar {
+    margin-left: 0;
+  }
 }
