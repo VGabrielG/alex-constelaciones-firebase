@@ -9,7 +9,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #111111;
   background: transparent;
   padding-top: 15vh;
   overflow: hidden; /* Evita el scroll */
@@ -34,7 +34,7 @@
   height: 300px; /* Alto deseado */
   border-radius: 20px; /* Bordes redondeados */
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border: 3px solid #FFA500; /* Borde naranja */
   opacity: 0; /* Inicialmente invisible para la animación */
   animation: fallIn 1s ease-in-out forwards;
@@ -83,7 +83,6 @@
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.5rem;
-  animation: fadeInDown 1s ease-in-out;
   
 }
 
@@ -93,19 +92,6 @@
   font-weight: 300;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   margin-bottom: 2.5rem;
-  animation: fadeInUp 1s ease-in-out 0.5s;
-  animation-fill-mode: both;
-}
-
-/* Animaciones */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fallIn {

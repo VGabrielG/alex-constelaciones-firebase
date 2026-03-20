@@ -13,13 +13,13 @@
 /* Título y texto de introducción deben ser claros para leerse sobre el azul */
 .main-title {
   font-size: 2.5rem;
-  color: #E0E0E0 !important; /* REFUERZO: Color claro */
+  color: #111 !important; /* REFUERZO: Color oscuro */
   margin-bottom: 1rem;
 }
 
 .intro-text {
   font-size: 1.25rem;
-  color: #BDBDBD !important; /* REFUERZO: Color claro */
+  color: #444 !important; /* REFUERZO: Color oscuro */
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;

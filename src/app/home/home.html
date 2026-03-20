@@ -1,7 +1,7 @@
-<app-particles-background></app-particles-background>
+
 <div class="home-container">
-  <h1 class="main-title">Alexandros Tefarikis</h1>
-  <p class="subtitle">Músico, Compositor y Productor de Eventos</p>
+  <h1 class="main-title animate-fade-down">Alexandros Tefarikis</h1>
+  <p class="subtitle animate-fade-up">Músico, Compositor y Productor de Eventos</p>
   <div class="images-container">
     <div *ngFor="let video of videos" class="image-wrapper">
       <img [src]="video.thumb" [alt]="video.alt" class="profile-image" [class.clickable]="video.url" (click)="video.url && openVideoModal(video.url)">

@@ -8,7 +8,7 @@
 .main-title {
   font-family: 'Dancing Script', cursive;
   font-size: 3rem;
-  color: #fff;
+  color: #111;
   margin-bottom: 2rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .noticia-card {
-  background-color: #1a1a1a;
+  background-color: #f9f9f9;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -33,7 +33,7 @@
 
 .noticia-descripcion {
   padding: 1rem;
-  color: #ccc;
+  color: #333;
 }
 
 /* Media Queries for Responsive Design */

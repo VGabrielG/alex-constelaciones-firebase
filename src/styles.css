@@ -8,13 +8,50 @@
 
 /* Establece el fondo y el color de texto para toda la aplicación */
 body {
-  background-color: #040926; /* Azul oscuro del fondo de partículas */
-  color: #E0E0E0; /* Un blanco suave para mejor legibilidad */
-  margin: 0; /* Asegura que no haya márgenes inesperados */
-  font-family: sans-serif; /* Una fuente base consistente */
+  background-color: #FFFFFF; /* Fondo blanco */
+  color: #333333; /* Texto oscuro para contraste */
+  margin: 0;
+  font-family: sans-serif;
 }
 
 /* Asegura que el contenedor principal ocupe toda la altura */
 html, body {
   height: 100%;
+}
+
+/* 
+  ========================================
+  ANIMACIONES GLOBALES
+  ========================================
+*/
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-down {
+  animation: fadeInDown 1s ease-in-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-fill-mode: both;
 }

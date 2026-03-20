@@ -1,12 +1,3 @@
-.particles-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 /* Estilos para \"Productos Audiovisuales\" con tarjetas blancas sobre fondo azul */
 .products-container {
   padding: 8rem 2rem 2rem 2rem;
@@ -24,13 +15,13 @@
 
 .main-title {
   font-size: 2.5rem;
-  color: #E0E0E0;
+  color: #111111;
   margin-bottom: 1rem;
 }
 
 .intro-text {
   font-size: 1.25rem;
-  color: #BDBDBD;
+  color: #444444;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;

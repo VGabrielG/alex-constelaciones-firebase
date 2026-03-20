@@ -26,12 +26,9 @@
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
-    "ng-particles": "^3.12.0",
     "p5": "^2.0.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "tsparticles": "^2.12.0",
-    "tsparticles-engine": "^2.12.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

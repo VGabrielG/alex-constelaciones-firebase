@@ -13,8 +13,8 @@ body {
     - Un fondo azul oscuro y profesional.
     - Un color de texto global claro para todo lo que esté fuera de las "tarjetas".
   */
-  background-color: #0D1B2A; /* Azul oscuro profundo */
-  color: #E0E0E0; /* Un blanco suave para el texto general */
+  background-color: #FFFFFF; /* Fondo blanco */
+  color: #333333; /* Texto oscuro */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,7 +28,7 @@ body {
 
 /* Estilos para los títulos y párrafos globales (fuera de las tarjetas) */
 h1, h2, h3, h4, h5, h6 {
-  color: #EAEAEA;
+  color: #111111;
   font-weight: 500;
 }
 

@@ -3,12 +3,12 @@ import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { HeaderComponent } from './header/header';
 import { CommonModule } from '@angular/common';
-import { ParticlesBackground } from './particles-background/particles-background';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, CommonModule, ParticlesBackground],
+  imports: [RouterOutlet, HeaderComponent, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
